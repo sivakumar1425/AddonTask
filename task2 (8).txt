@@ -1,0 +1,15 @@
+public class Task2 {
+    public static void main(String[] args) {
+        HashSet<String> emails = new HashSet<>();
+
+       
+        emails.add("arun@example.com");
+        emails.add("divya@example.com");
+        emails.add("arun@example.com");  
+        
+        System.out.println("Unique Email Addresses:");
+        for (String email : emails) {
+            System.out.println(email);
+        }
+    }
+}
