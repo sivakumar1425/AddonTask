@@ -1,0 +1,45 @@
+mysql> create database pd;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use pd;
+Database changed
+mysql> create table patient(
+    -> patient_id int,
+    -> name varchar(50),
+    -> age int,
+    -> gender varchar(50);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5
+mysql> create table patient(
+    -> patient_id int,
+    -> name varchar(50),
+    -> age int,
+    -> gender varchar(50));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table doctor(
+    -> doctor_id int,
+    -> name varchar(50),
+    -> specialization varchar(50);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+mysql> create table doctor(
+    -> doctor_id int,
+    -> name varchar(50),
+    -> specialization varchar(50));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table appointment(
+    -> appointment_id int,
+    -> appointment_date int;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3
+mysql> create table appointment(
+    -> appointment_id int,
+    -> appointment_date int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into patient values(1,'ravi',43,'male'),(2,'guru',32,'male'),(3,'pavi',23,'female');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> insert into doctor values(01,'ragu','cardiologist'),(02,'pallavi',32,'family physician'),(03,'neurologist');
+ERROR 1136 (21S01): Column count doesn't match value count at row 2
+mysql> Terminal close -- exit!
