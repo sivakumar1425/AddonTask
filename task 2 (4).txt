@@ -1,0 +1,57 @@
+class Person {
+    String name;
+    int age;
+
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+   
+    public void displayPersonDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+
+class Employee extends Person {
+    int employeeId;
+    double basicPay, hra, da;
+
+   
+    public Employee(String name, int age, int employeeId, double basicPay, double hra, double da) {
+        super(name, age); // Call Person constructor
+        this.employeeId = employeeId;
+        this.basicPay = basicPay;
+        this.hra = hra;
+        this.da = da;
+    }
+
+    
+    public double calculateSalary() {
+        return basicPay + hra + da;
+    }
+
+    
+    public void displayEmployeeDetails() {
+        displayPersonDetails(); // Call method from Person
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Basic Pay: ₹" + basicPay);
+        System.out.println("HRA: ₹" + hra);
+        System.out.println("DA: ₹" + da);
+        System.out.println("Total Salary: ₹" + calculateSalary());
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Employee emp = new Employee("Bhavani", 28, 101, 30000, 5000, 4000);
+        
+        
+        emp.displayEmployeeDetails();
+    }
+}
