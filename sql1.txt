@@ -1,0 +1,16 @@
+  create database academy;
+Query OK, 1 row affected (0.06 sec)
+
+mysql> use academy;
+Database changed
+mysql> create table students(
+     student_id int primary key,
+     name varchar(50),
+     marks int);
+
+
+mysql> insert into students values(1,'sibi',85),
+     (2,'siva',78),
+     (3,'pradeep',92),
+     (4,'jeeva',90),
+    (5,'Mohan',95);
