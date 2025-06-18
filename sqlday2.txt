@@ -1,0 +1,13 @@
+
+
+
+create table courses(
+     course_id int primary key,
+     course_name varchar(100),
+     fee decimal(10,2));
+
+
+ insert into courses values(101,'java',3000.00),
+     (102,'web devop',4000.00),
+     (103,'fs devop',4500.00),
+     (104,'sql',3000.00);
